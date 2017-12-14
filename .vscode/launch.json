@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Angular in Chome - Debug",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceRoot}/angular"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Sails Debug",
+      "address": "localhost",
+      "port": 5858,
+      "restart": true,
+      "sourceMaps": false,
+      "localRoot": "${workspaceRoot}"
+    },
+    {
+      "name": "Launch Sails Unit Test",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/server/node_modules/.bin/jasmine",
+      "stopOnEntry": false,
+      "args": [
+        "${workspaceRoot}/server/api/tests/unit/*"
+      ],
+      "cwd": "${workspaceRoot}/server",
+      "preLaunchTask": null,
+      "runtimeExecutable": null,
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "sourceMaps": false
+    },
+    {
+      "name": "Launch Sails Integration Test",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/server/node_modules/.bin/jasmine",
+      "stopOnEntry": false,
+      "args": [
+        "${workspaceRoot}/server/api/tests/integration/*"
+      ],
+      "cwd": "${workspaceRoot}/server",
+      "preLaunchTask": null,
+      "runtimeExecutable": null,
+      "env": {
+        "NODE_ENV": "test"
+      },
+      "sourceMaps": false
+    }
+  ]
+}

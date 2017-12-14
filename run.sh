@@ -1,0 +1,1 @@
+docker-compose up; ./angular/node_modules/@angular/cli/bin/ng serve

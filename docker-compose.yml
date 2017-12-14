@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  run-mysql: 
+    container_name: run-mysql-container
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=root
+    ports:
+      - 3310:3306
+  run-redis:
+    container_name: run-redis-container
+    image: redis:3.0
+    ports:
+      - 6379:6379
